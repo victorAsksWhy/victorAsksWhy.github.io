@@ -97,4 +97,32 @@ table {
     padding: 10px 4px;
     
 }
-   
+
+a.buttonType:link, a.buttonType:visited {
+    text-decoration: none;
+    background-color: #1ff297;
+    color: white;
+    margin: 10px 25px;
+    padding: 10px 4px;
+    text-align: center;
+    display: inline-block;
+    font-family: Verdana,sans-serif;
+    border: 3px solid #008751;
+}
+
+a.buttonType:hover, a.buttonType:active{
+    text-decoration: underline;
+    background-color: #008751;
+}
+
+a.normal:link, a:visited{
+    text-decoration:none;
+    color:white;
+    padding: 2px 25px;
+    margin: 4px 4px;
+    font-family: Verdana,sans-serif;
+}
+
+a.nomal:hover, a.normal:active{
+    text-decoration:underline;
+}
