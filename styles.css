@@ -118,8 +118,6 @@ a.buttonType:hover, a.buttonType:active{
 a.normal:link, a:visited{
     text-decoration:none;
     color:white;
-    padding: 2px 25px;
-    margin: 4px 4px;
     font-family: Verdana,sans-serif;
 }
 
