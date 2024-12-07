@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask AI</title>
+
+</head>
+<body>
+
+  <h1>Ask AI</h1>
+  <label for="question">Enter your question:</label>
+  <input type="text" id="question" name="question" placeholder="Ask me something..." />
+  <button onclick="getAIResponse()">Ask</button>
+
+  <div id="response"></div>
+
+  <script>
+    async function getAIResponse() {
+      const question = document.getElementById('question').value;
+      if (!question) {
+        alert('Please enter a question.');
+        return;
+      }
+
+      // Clear previous response
+      document.getElementById('response').innerHTML = 'Thinking...';
+
+      try {
+        const response = await fetch('https://your-backend-server.com/ask', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ question }),
+        });
+
+        const data = await response.json();
+        document.getElementById('response').innerHTML = data.answer;
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('response').innerHTML = 'An error occurred. Please try again later.';
+      }
+    }
+  </script>
+
+</body>
+</html>
