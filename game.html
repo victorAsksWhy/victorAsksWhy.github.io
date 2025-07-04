@@ -1,43 +1,85 @@
+
+<!--<script src="https://cdn this stuff broken lol-->
 <!DOCTYPE html>
-<title>Boulder Hunt</title>
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>Boulder Hunt</title>
+    <title>Points Unautomated</title>
+    <script src="points.js"></script>
+	<script src="adminpanel.js"></script>
+	<script src="clickanimation.js"></script>
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <div>
-        <h1>Download my game, Boulder Hunt</h1>
-        <h1>Features: Walling! Collision!</h1>
-        <hr>
-        <h2>System Requirements:</h2>
-        <ul>
-            <li>Java is installed</li>
-            <li>At least 20 KiB of free disk space</li>
-        </ul>
-        <hr>
-        <h2>Most recent Version:</h2>
-        <p>Changes: Added main world map and collision.</p>
-        <a href="/res/misc/treasureHunt_v1.1.0.jar">Download Link</a>
-        <hr>
-        <h2>Older Versions</h2>
-        <table style="width:100%">
-            <tr>
-                <th>Version</th>
-                <th>Changes</th>
-                <th>Download</th>
-            </tr>
-            <tr>
-                <td>1.0.0</td>
-                <td>Initial Release</td>
-                <td><a href="/res/misc/treasureHunt_v1.0.0.jar">Download</a></td>
-            </tr>
-        </table>
-        <hr>
-        <h2>Tutorial Link</h2>
-        <p>I followed a tutorial for this project. The youtube playlist for the tutorial is linked below: </p>
-        <br>
-        <a href="https://www.youtube.com/watch?v=om59cwR7psI&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq">Click here to go to playlist</a>
-    
+    <h1>Points Unautomated</h1>
+	<h1 id="hackindicator" style="display:none; color:red">Debug mode on</h1>
+	<button style="position:fixed; top:0; right:0; margin:8px;" id="musicToggle">Unmute</button>
+	<script src="bgmusicplayer.js"></script><!--scipt must be here, or it will get null><-->
+    <hr>
+	<h2>News</h2> 
+	<p class="textGeneric">The biggest update yet! Music, sound effects, and art! You can now get leaves, but they don't do anything yet.</p>
+    <h2>Production</h2>     
+    <div class="buttons">
+        <button class="cookie" id="cookieUpgrade0" style="display: block; right: 0px;" onclick="addPoint(); animatePoint()">
+            <p class="productionText">Click to produce 
+                <span class="productionText" id="pointIndicator">1</span></p>
+                <p class="productionText" id="pointsPluralize"> point.</p>    
+        </button>
+		<img src="factorypoint1.png" id="pointfactoryimage">
+        <button class="leaf leafstuff" id="leafProducer" onclick="makeLeaf()"  name="affectedByLeaf">
+            <p class="leafText">Click to produce 
+                <span class=leafText id="leafIndicator">1</span>
+                <p class="leafText"> leaf</p>
+            </p>
+        </button>
     </div>
-    
-</body>
+    <hr>
+    <h2>Stats</h2>
+    <div class="infoDisplays">
+        <div id="cookiesModal" class="statsModal">
+            <p class="modalText">You have</p>
+            <p class="modalText" id="pointstext">0</p>
+            <p class="modalText" id="pointstextPluralize">point.</p>   
+        </div>
+        <div id="leafModal" class="leafModal leafstuff" name="affectedByLeaf">
+            <p class="leafTextCentered">You have</p>
+            <p class="leafTextCentered" id="leafTextDisplay">0</p>
+            <p class="leafTextCentered">leaves</p>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div id="clickupgrades">
+        <button class="clickUpgrade" id="clickUpgrade1" onclick="upgrade1()">
+            <p class="clickUpgradeTitle">1. Click enhancements</p>
+            <p class="clickUpgradeText">Increase the number of points/click by 1 for</p>
+            <p class="modalTextStat" id="upgrade1costindicator">10</p>
+            <p class="clickUpgradeText">points.</p>
+            <p class="clickUpgradeTextInline">Level: <p class="clickUpgradeTextInline" id="upg1level">1</p><p class="clickUpgradeTextInline">/20</p></p>
+        </button>
+    <br>
+	<br>
+        <button class="clickUpgrade" id="clickUpgrade2" onclick="upgrade2()">
+            <p class="clickUpgradeTitle">2. More enhancements</p>
+            <p class="clickUpgradeText">Base PPC (points per click) x1.5 for</p>
+            <p class = "modalTextStat" id="upgrade2costindicator">75</p>
+            <p class="clickUpgradeText">points.</p>
+            <p class="clickUpgradeTextInline">Level: <p class="clickUpgradeTextInline" id="upg2level">0</p><p class="clickUpgradeTextInline">/5</p></p>
+        </button>
+    <br>
+	<br>
+        <button class="clickUpgrade" id="clickUpgrade3" onclick="upgrade3()">
+            <p class="clickUpgradeTitle">3. MASSIVE! enhancements</p>
+            <p class="clickUpgradeText">Add 25 to base PPC for</p>
+            <p class="modalTextStat" id="upgrade3costIndicator">750</p>
+            <p class="clickUpgradeText">points.</p>
+            <p class="clickUpgradeTextInline">Level: </p>
+            <p class="clickUpgradeTextInline" id="upg3level">0<p class="clickUpgradeTextInline" id="upg3maxlevel">/1</p></p>
+        </button>
+	<br>
+	<br>
+        <button class="clickUpgrade" id="clickupgrade4" onclick="upgrade4()">
+            <p class="clickUpgradeTitle">4. The next phase</p>
+			<p class="clickUpgradeText">Unlock the next phase of gameplay for</p>
+			<p class="modalTextStat">3000</p>
+			<p class="clickUpgradeText">points</p>
+			<p class="clickUpgradeTextInline" id="leafunlocked">Locked</p>
+        </button>

@@ -1,0 +1,160 @@
+button.cookie{
+    background-color: #b8922a;
+    color: white;
+    padding: 16px 32px;
+    font-size: 12px;
+    border: 2px solid #705a1e;
+    
+}
+p.clickPointText{
+    font-size: 12;
+    color:white;
+    text-align: center;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.statsModal{
+    background-color: #b8922a;
+    border-width: 2px;
+    border-color: #705a1e; 
+    border-style: solid;
+    color:white;
+    padding: 10px 25px;
+    font-size: 12px;
+    width: 10%;
+
+}
+p.modalText{
+    font-size: 12;
+    color:rgb(255,255,255);
+    text-align: center;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+p.modalTextInline{
+    font-size: 12;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    line-height: 4px;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.modalTextStat{
+    font-size: 12;
+    color:#b8922a;    
+    text-align: center;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+button.clickUpgrade{
+    background-color: #e2e2e2;
+    border-color: rgb(73, 73, 73);
+    border-radius: 2px;
+    border-style: solid;
+    border: 2px solid #a5a5a5;
+    padding: 10px 12px;
+    font-size: 12px;
+    position: static;
+}
+
+p.clickUpgradeText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 4px;
+    color: black;
+}
+
+p.clickUpgradeTextInline{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 4px;
+    color: black;
+    display: inline-block;
+}
+
+p.clickUpgradeTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color:black;
+    
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.productionText{
+    font-size: 12px;
+    color:white;
+    text-align: center;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span.productionTextInline{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 4px;
+    color: rgb(255, 255, 255);
+}
+/* code for the leaf themed stuff*/
+/*hate css*/
+
+button.leaf{
+    background-color: #5aa55a;
+    color: #f4fdf4;
+    padding: 16px 32px;
+    font-size: 12px;
+    border: 2px solid #375e37;
+}
+
+.leafText{
+    font-size: 12px;
+    color: #f4fdf4;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.leafModal{
+    background-color: #5aa55a;
+    border: 2px solid #375e37;
+    color:#f4fdf4;
+    padding: 10px 25px;
+    font-size: 12px;
+    width: 10%;
+}
+.buttons{
+    display: flex;
+    gap: 8px;
+}
+
+.leafTextCentered{
+    font-size: 12px;
+    color: #f4fdf4;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.infoDisplays{
+    display: flex;
+    gap: 8px;
+}
+
+.leafstuff{
+    display: none;
+}
+
+.textGeneric{
+	font-size: 12;
+    color:black;
+    text-align: normal;
+    line-height: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+	
